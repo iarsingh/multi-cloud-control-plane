@@ -49,3 +49,6 @@ pip install -r requirements.txt
 pytest -q
 ```
 
+## Ops plane
+
+Workspaces, tenant isolation, job approval, and audit live under `/v1`. Production apply is refused. See `docs/ARCHITECTURE.md`.

@@ -1,9 +1,11 @@
+from controlplane.ops import router as ops_router
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 
 from controlplane.plan import RESOURCES, build_plan
 
 app = FastAPI(title="Multi-cloud control plane")
+app.include_router(ops_router, prefix="/v1")
 
 
 class PlanRequest(BaseModel):
